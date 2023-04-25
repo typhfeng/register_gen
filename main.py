@@ -4,6 +4,7 @@ from collections import OrderedDict
 import json
 # Replace "filename.hjson" with the name of your Hjson file
 with open("/Users/sunkewei/Documents/GitHub/terry_work/opentitan/hw/ip/i2c/data/i2c_temp.hjson", "r") as f:
+#with open("https://github.com/lowRISC/opentitan/blob/master/hw/ip/i2c/data/i2c.hjson", "r") as f:
     data = hjson.loads(f.read())
     data_dict = dict(data)
     register_dict = data_dict['registers']
@@ -25,27 +26,26 @@ with open("/Users/sunkewei/Documents/GitHub/terry_work/opentitan/hw/ip/i2c/data/
         if 'fields' in new_reg[each_new_reg]:
             new_reg[each_new_reg]['field'] = dict()
             if len(new_reg[each_new_reg]['fields']) == 1:
-                new_reg[each_new_reg]['field'][new_reg[each_new_reg]] = dict()
-                new_reg[each_new_reg]['field'][new_reg[each_new_reg]]["SW"] = swaccess.upper()
-                new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['HW'] = ""
-                new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Type'] = ""
-                if 'resval' in new_reg[each_new_reg]['field'][new_reg[each_new_reg]]:
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Default'] = \
-                        new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['resval']
+                new_reg[each_new_reg]['field'][each_new_reg] = dict()
+                new_reg[each_new_reg]['field'][each_new_reg]["SW"] = swaccess.upper()
+                new_reg[each_new_reg]['field'][each_new_reg]['HW'] = ""
+                new_reg[each_new_reg]['field'][each_new_reg]['Type'] = ""
+                if 'resval' in new_reg[each_new_reg]['fields']:
+                    new_reg[each_new_reg]['field'][each_new_reg]['Default'] = \
+                        new_reg[each_new_reg]['fields']['resval']
                 else:
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Default'] = "'h0"
-                new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Description'] = \
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['desc']
-                if ':' in new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['bits']:
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Msb'] = \
-                        new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['bits'].split(":")[0]
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Lsb'] = \
-                        new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['bits'].split(":")[1]
+                    new_reg[each_new_reg]['field'][each_new_reg]['Default'] = "'h0"
+                new_reg[each_new_reg]['field'][each_new_reg]['Description'] = ""
+                if ':' in new_reg[each_new_reg]['fields'][0]['bits']:
+                    new_reg[each_new_reg]['field'][each_new_reg]['Msb'] = \
+                        new_reg[each_new_reg]['fields'][0]['bits'].split(":")[0]
+                    new_reg[each_new_reg]['field'][each_new_reg]['Lsb'] = \
+                        new_reg[each_new_reg]['fields'][0]['bits'].split(":")[1]
                 else:
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Msb'] = \
-                        new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['bits']
-                    new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['Lsb'] = \
-                        new_reg[each_new_reg]['field'][new_reg[each_new_reg]]['bits']
+                    new_reg[each_new_reg]['field'][each_new_reg]['Msb'] = \
+                        new_reg[each_new_reg]['fields']['bits']
+                    new_reg[each_new_reg]['field'][each_new_reg]['Lsb'] = \
+                        new_reg[each_new_reg]['fields']['bits']
             else:
                 for each_field_in_reg in new_reg[each_new_reg]['fields']:
                     new_reg[each_new_reg]['field'][each_field_in_reg['name'].lower()] = each_field_in_reg
