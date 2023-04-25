@@ -68,6 +68,9 @@ with open("/Users/sunkewei/Documents/GitHub/terry_work/opentitan/hw/ip/i2c/data/
                             new_reg[each_new_reg]['field'][each_new_reg_field]['bits']
                         new_reg[each_new_reg]['field'][each_new_reg_field]['Lsb'] = \
                             new_reg[each_new_reg]['field'][each_new_reg_field]['bits']
+        del new_reg[each_new_reg]['fields']
+        if 'tags' in new_reg[each_new_reg]:
+            del new_reg[each_new_reg]['tags']
         #each_reg['field']: dict(each_reg['fields'])
 
     #    if 'fields' in each_reg and each_reg['fields'] == '':

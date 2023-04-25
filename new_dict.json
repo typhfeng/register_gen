@@ -2,50 +2,6 @@
     "ctrl": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "0",
-                "resval": "0",
-                "name": "ENABLEHOST",
-                "desc": "Enable Host I2C functionality",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "0",
-                "Description": "Enable Host I2C functionality",
-                "Msb": "0",
-                "Lsb": "0"
-            },
-            {
-                "bits": "1",
-                "resval": "0",
-                "name": "ENABLETARGET",
-                "desc": "Enable Target I2C functionality",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "0",
-                "Description": "Enable Target I2C functionality",
-                "Msb": "1",
-                "Lsb": "1"
-            },
-            {
-                "bits": "2",
-                "resval": "0",
-                "name": "LLPBK",
-                "desc": "Enable I2C line loopback test\nIf line loopback is enabled, the internal design sees ACQ and RX data as \"1\"",
-                "tags": [
-                    "excl:CsrAllTests:CsrExclWrite"
-                ],
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "0",
-                "Description": "Enable I2C line loopback test\nIf line loopback is enabled, the internal design sees ACQ and RX data as \"1\"",
-                "Msb": "2",
-                "Lsb": "2"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -100,137 +56,6 @@
         "swaccess": "ro",
         "hwaccess": "hwo",
         "hwext": "true",
-        "fields": [
-            {
-                "bits": "0",
-                "name": "FMTFULL",
-                "desc": "FMT FIFO is full",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "FMT FIFO is full",
-                "Msb": "0",
-                "Lsb": "0"
-            },
-            {
-                "bits": "1",
-                "name": "RXFULL",
-                "desc": "RX FIFO is full",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "RX FIFO is full",
-                "Msb": "1",
-                "Lsb": "1"
-            },
-            {
-                "bits": "2",
-                "name": "FMTEMPTY",
-                "desc": "FMT FIFO is empty",
-                "resval": "1",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "1",
-                "Description": "FMT FIFO is empty",
-                "Msb": "2",
-                "Lsb": "2"
-            },
-            {
-                "bits": "5",
-                "name": "RXEMPTY",
-                "desc": "RX FIFO is empty",
-                "resval": "1",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "1",
-                "Description": "RX FIFO is empty",
-                "Msb": "5",
-                "Lsb": "5"
-            },
-            {
-                "bits": "3",
-                "name": "HOSTIDLE",
-                "desc": "Host functionality is idle. No Host transaction is in progress",
-                "resval": "1",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "1",
-                "Description": "Host functionality is idle. No Host transaction is in progress",
-                "Msb": "3",
-                "Lsb": "3"
-            },
-            {
-                "bits": "4",
-                "name": "TARGETIDLE",
-                "desc": "Target functionality is idle. No Target transaction is in progress",
-                "resval": "1",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "1",
-                "Description": "Target functionality is idle. No Target transaction is in progress",
-                "Msb": "4",
-                "Lsb": "4"
-            },
-            {
-                "bits": "6",
-                "name": "TXFULL",
-                "desc": "TX FIFO is full",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "TX FIFO is full",
-                "Msb": "6",
-                "Lsb": "6"
-            },
-            {
-                "bits": "7",
-                "name": "ACQFULL",
-                "desc": "ACQ FIFO is full",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "ACQ FIFO is full",
-                "Msb": "7",
-                "Lsb": "7"
-            },
-            {
-                "bits": "8",
-                "name": "TXEMPTY",
-                "desc": "TX FIFO is empty",
-                "resval": "1",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "1",
-                "Description": "TX FIFO is empty",
-                "Msb": "8",
-                "Lsb": "8"
-            },
-            {
-                "bits": "9",
-                "name": "ACQEMPTY",
-                "desc": "ACQ FIFO is empty",
-                "resval": "1",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "1",
-                "Description": "ACQ FIFO is empty",
-                "Msb": "9",
-                "Lsb": "9"
-            }
-        ],
-        "tags": [
-            "excl:CsrNonInitTests:CsrExclWriteCheck"
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -370,14 +195,6 @@
         "hwaccess": "hrw",
         "hwext": "true",
         "hwre": "true",
-        "fields": [
-            {
-                "bits": "7:0"
-            }
-        ],
-        "tags": [
-            "excl:CsrAllTests:CsrExclCheck"
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -399,80 +216,6 @@
         "swaccess": "wo",
         "hwaccess": "hro",
         "hwqe": "true",
-        "fields": [
-            {
-                "bits": "7:0",
-                "name": "FBYTE",
-                "desc": "Format Byte. Directly transmitted if no flags are set.",
-                "SW": "WO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Format Byte. Directly transmitted if no flags are set.",
-                "Msb": "7",
-                "Lsb": "0"
-            },
-            {
-                "bits": "8",
-                "name": "START",
-                "desc": "Issue a START condition before transmitting BYTE.",
-                "SW": "WO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Issue a START condition before transmitting BYTE.",
-                "Msb": "8",
-                "Lsb": "8"
-            },
-            {
-                "bits": "9",
-                "name": "STOP",
-                "desc": "Issue a STOP condition after this operation",
-                "SW": "WO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Issue a STOP condition after this operation",
-                "Msb": "9",
-                "Lsb": "9"
-            },
-            {
-                "bits": "10",
-                "name": "READ",
-                "desc": "Read BYTE bytes from I2C. (256 if BYTE==0)",
-                "SW": "WO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Read BYTE bytes from I2C. (256 if BYTE==0)",
-                "Msb": "10",
-                "Lsb": "10"
-            },
-            {
-                "bits": "11",
-                "name": "RCONT",
-                "desc": "Do not NAK the last byte read, let the read operation continue",
-                "SW": "WO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Do not NAK the last byte read, let the read operation continue",
-                "Msb": "11",
-                "Lsb": "11"
-            },
-            {
-                "bits": "12",
-                "name": "NAKOK",
-                "desc": "Do not signal an exception if the current byte is not ACK'd",
-                "SW": "WO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Do not signal an exception if the current byte is not ACK'd",
-                "Msb": "12",
-                "Lsb": "12"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -557,133 +300,6 @@
         "swaccess": "rw",
         "hwaccess": "hro",
         "hwqe": "true",
-        "fields": [
-            {
-                "bits": "0",
-                "swaccess": "wo",
-                "name": "RXRST",
-                "desc": "RX fifo reset. Write 1 to the register resets RX_FIFO. Read returns 0",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "RX fifo reset. Write 1 to the register resets RX_FIFO. Read returns 0",
-                "Msb": "0",
-                "Lsb": "0"
-            },
-            {
-                "bits": "1",
-                "swaccess": "wo",
-                "name": "FMTRST",
-                "desc": "FMT fifo reset. Write 1 to the register resets FMT_FIFO. Read returns 0",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "FMT fifo reset. Write 1 to the register resets FMT_FIFO. Read returns 0",
-                "Msb": "1",
-                "Lsb": "1"
-            },
-            {
-                "bits": "4:2",
-                "name": "RXILVL",
-                "desc": "Trigger level for RX interrupts. If the FIFO depth exceeds\nthis setting, it raises rx_threshold interrupt.",
-                "enum": [
-                    {
-                        "value": "0",
-                        "name": "rxlvl1",
-                        "desc": "1 character"
-                    },
-                    {
-                        "value": "1",
-                        "name": "rxlvl4",
-                        "desc": "4 characters"
-                    },
-                    {
-                        "value": "2",
-                        "name": "rxlvl8",
-                        "desc": "8 characters"
-                    },
-                    {
-                        "value": "3",
-                        "name": "rxlvl16",
-                        "desc": "16 characters"
-                    },
-                    {
-                        "value": "4",
-                        "name": "rxlvl30",
-                        "desc": "30 characters"
-                    }
-                ],
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Trigger level for RX interrupts. If the FIFO depth exceeds\nthis setting, it raises rx_threshold interrupt.",
-                "Msb": "4",
-                "Lsb": "2"
-            },
-            {
-                "bits": "6:5",
-                "name": "FMTILVL",
-                "desc": "Trigger level for FMT interrupts. If the FIFO depth falls below\nthis setting, it raises fmt_threshold interrupt.",
-                "enum": [
-                    {
-                        "value": "0",
-                        "name": "fmtlvl1",
-                        "desc": "1 character"
-                    },
-                    {
-                        "value": "1",
-                        "name": "fmtlvl4",
-                        "desc": "4 characters"
-                    },
-                    {
-                        "value": "2",
-                        "name": "fmtlvl8",
-                        "desc": "8 characters"
-                    },
-                    {
-                        "value": "3",
-                        "name": "fmtlvl16",
-                        "desc": "16 characters"
-                    }
-                ],
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Trigger level for FMT interrupts. If the FIFO depth falls below\nthis setting, it raises fmt_threshold interrupt.",
-                "Msb": "6",
-                "Lsb": "5"
-            },
-            {
-                "bits": "7",
-                "swaccess": "wo",
-                "name": "ACQRST",
-                "desc": "ACQ FIFO reset. Write 1 to the register resets it. Read returns 0",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "ACQ FIFO reset. Write 1 to the register resets it. Read returns 0",
-                "Msb": "7",
-                "Lsb": "7"
-            },
-            {
-                "bits": "8",
-                "swaccess": "wo",
-                "name": "TXRST",
-                "desc": "TX FIFO reset. Write 1 to the register resets it. Read returns 0",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "TX FIFO reset. Write 1 to the register resets it. Read returns 0",
-                "Msb": "8",
-                "Lsb": "8"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -821,59 +437,6 @@
         "swaccess": "ro",
         "hwaccess": "hwo",
         "hwext": "true",
-        "fields": [
-            {
-                "bits": "6:0",
-                "name": "FMTLVL",
-                "desc": "Current fill level of FMT fifo",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Current fill level of FMT fifo",
-                "Msb": "6",
-                "Lsb": "0"
-            },
-            {
-                "bits": "22:16",
-                "name": "RXLVL",
-                "desc": "Current fill level of RX fifo",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Current fill level of RX fifo",
-                "Msb": "22",
-                "Lsb": "16"
-            },
-            {
-                "bits": "14:8",
-                "name": "TXLVL",
-                "desc": "Current fill level of TX fifo",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Current fill level of TX fifo",
-                "Msb": "14",
-                "Lsb": "8"
-            },
-            {
-                "bits": "30:24",
-                "name": "ACQLVL",
-                "desc": "Current fill level of ACQ fifo",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Current fill level of ACQ fifo",
-                "Msb": "30",
-                "Lsb": "24"
-            }
-        ],
-        "tags": [
-            "excl:CsrNonInitTests:CsrExclWriteCheck"
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -933,44 +496,6 @@
     "ovrd": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "0",
-                "name": "TXOVRDEN",
-                "desc": "Override the SDA and SCL TX signals.",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Override the SDA and SCL TX signals.",
-                "Msb": "0",
-                "Lsb": "0"
-            },
-            {
-                "bits": "1",
-                "name": "SCLVAL",
-                "desc": "Value for SCL Override. Set to 0 to drive TX Low, and set to 1 for high-Z",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Value for SCL Override. Set to 0 to drive TX Low, and set to 1 for high-Z",
-                "Msb": "1",
-                "Lsb": "1"
-            },
-            {
-                "bits": "2",
-                "name": "SDAVAL",
-                "desc": "Value for SDA Override. Set to 0 to drive TX Low, and set to 1 for high-Z",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Value for SDA Override. Set to 0 to drive TX Low, and set to 1 for high-Z",
-                "Msb": "2",
-                "Lsb": "2"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1019,35 +544,6 @@
         "swaccess": "ro",
         "hwaccess": "hwo",
         "hwext": "true",
-        "fields": [
-            {
-                "bits": "15:0",
-                "name": "SCL_RX",
-                "desc": "Last 16 oversampled values of SCL. Most recent bit is bit 0, oldest 15.",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Last 16 oversampled values of SCL. Most recent bit is bit 0, oldest 15.",
-                "Msb": "15",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31:16",
-                "name": "SDA_RX",
-                "desc": "Last 16 oversampled values of SDA. Most recent bit is bit 16, oldest 31.",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Last 16 oversampled values of SDA. Most recent bit is bit 16, oldest 31.",
-                "Msb": "31",
-                "Lsb": "16"
-            }
-        ],
-        "tags": [
-            "excl:CsrAllTests:CsrExclCheck"
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1083,32 +579,6 @@
     "timing0": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "15:0",
-                "name": "THIGH",
-                "desc": "The actual time to hold SCL high in a given pulse",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "The actual time to hold SCL high in a given pulse",
-                "Msb": "15",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31:16",
-                "name": "TLOW",
-                "desc": "The actual time to hold SCL low between any two SCL pulses",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "The actual time to hold SCL low between any two SCL pulses",
-                "Msb": "31",
-                "Lsb": "16"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1144,32 +614,6 @@
     "timing1": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "15:0",
-                "name": "T_R",
-                "desc": "The nominal rise time to anticipate for the bus (depends on capacitance)",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "The nominal rise time to anticipate for the bus (depends on capacitance)",
-                "Msb": "15",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31:16",
-                "name": "T_F",
-                "desc": "The nominal fall time to anticipate for the bus (influences SDA hold times)",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "The nominal fall time to anticipate for the bus (influences SDA hold times)",
-                "Msb": "31",
-                "Lsb": "16"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1205,32 +649,6 @@
     "timing2": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "15:0",
-                "name": "TSU_STA",
-                "desc": "Actual setup time for repeated start signals",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Actual setup time for repeated start signals",
-                "Msb": "15",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31:16",
-                "name": "THD_STA",
-                "desc": "Actual hold time for start signals",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Actual hold time for start signals",
-                "Msb": "31",
-                "Lsb": "16"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1266,32 +684,6 @@
     "timing3": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "15:0",
-                "name": "TSU_DAT",
-                "desc": "Actual setup time for data (or ack) bits",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Actual setup time for data (or ack) bits",
-                "Msb": "15",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31:16",
-                "name": "THD_DAT",
-                "desc": "Actual hold time for data (or ack) bits\n(Note, where required, the parameters TVD_DAT is taken to be THD_DAT+T_F)",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Actual hold time for data (or ack) bits\n(Note, where required, the parameters TVD_DAT is taken to be THD_DAT+T_F)",
-                "Msb": "31",
-                "Lsb": "16"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1327,32 +719,6 @@
     "timing4": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "15:0",
-                "name": "TSU_STO",
-                "desc": "Actual setup time for stop signals",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Actual setup time for stop signals",
-                "Msb": "15",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31:16",
-                "name": "T_BUF",
-                "desc": "Actual time between each STOP signal and the following START signal",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Actual time between each STOP signal and the following START signal",
-                "Msb": "31",
-                "Lsb": "16"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1388,32 +754,6 @@
     "timeout_ctrl": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "30:0",
-                "name": "VAL",
-                "desc": "Clock stretching timeout value (in units of input clock frequency)",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Clock stretching timeout value (in units of input clock frequency)",
-                "Msb": "30",
-                "Lsb": "0"
-            },
-            {
-                "bits": "31",
-                "name": "EN",
-                "desc": "Enable timeout feature",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Enable timeout feature",
-                "Msb": "31",
-                "Lsb": "31"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1449,56 +789,6 @@
     "target_id": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "6:0",
-                "name": "ADDRESS0",
-                "desc": "I2C target address number 0",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "I2C target address number 0",
-                "Msb": "6",
-                "Lsb": "0"
-            },
-            {
-                "bits": "13:7",
-                "name": "MASK0",
-                "desc": "I2C target mask number 0",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "I2C target mask number 0",
-                "Msb": "13",
-                "Lsb": "7"
-            },
-            {
-                "bits": "20:14",
-                "name": "ADDRESS1",
-                "desc": "I2C target address number 1",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "I2C target address number 1",
-                "Msb": "20",
-                "Lsb": "14"
-            },
-            {
-                "bits": "27:21",
-                "name": "MASK1",
-                "desc": "I2C target mask number 1",
-                "SW": "RW",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "I2C target mask number 1",
-                "Msb": "27",
-                "Lsb": "21"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1560,35 +850,6 @@
         "hwaccess": "hrw",
         "hwext": "true",
         "hwre": "true",
-        "fields": [
-            {
-                "bits": "7:0",
-                "name": "ABYTE",
-                "desc": "Address for accepted transaction or acquired byte",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Address for accepted transaction or acquired byte",
-                "Msb": "7",
-                "Lsb": "0"
-            },
-            {
-                "bits": "9:8",
-                "name": "SIGNAL",
-                "desc": "Host issued a START before transmitting ABYTE, a STOP or a RESTART after the preceeding ABYTE",
-                "SW": "RO",
-                "HW": "",
-                "Type": "",
-                "Default": "'h0",
-                "Description": "Host issued a START before transmitting ABYTE, a STOP or a RESTART after the preceeding ABYTE",
-                "Msb": "9",
-                "Lsb": "8"
-            }
-        ],
-        "tags": [
-            "excl:CsrAllTests:CsrExclCheck"
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1625,11 +886,6 @@
         "swaccess": "wo",
         "hwaccess": "hro",
         "hwqe": "true",
-        "fields": [
-            {
-                "bits": "7:0"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
@@ -1650,11 +906,6 @@
     "host_timeout_ctrl": {
         "swaccess": "rw",
         "hwaccess": "hro",
-        "fields": [
-            {
-                "bits": "31:0"
-            }
-        ],
         "addr": "0x80",
         "sec_wr": "",
         "sec_rd": "",
